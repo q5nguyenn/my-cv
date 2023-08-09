@@ -495,6 +495,14 @@ $(document).ready(function () {
     return true;
   });
 
+  //Dowload
+  $('.download').click(function (e) {
+    const pdfURL = './images/my-cv.pdf';
+    const link = $('<a>').attr('href', pdfURL).attr('download', 'my-cv.pdf');
+    $('body').append(link);
+    link[0].click();
+    link.remove();
+  });
   // Choosecolor
   function setColor() {
     let colors = getItem('colors');
