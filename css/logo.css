@@ -1,0 +1,33 @@
+.logo-brand {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 40px;
+  transition: 0.3s;
+  cursor: pointer;
+  background-color: var(--bg-color1);
+  border-radius: 100%;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+  opacity: 0.8;
+}
+
+.logo-brand img {
+  width: 80%;
+  height: 80%;
+}
+
+.logo-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+}
+
+.logo-fixed:hover .logo-brand {
+  opacity: 1;
+  transition: 0.3s;
+}

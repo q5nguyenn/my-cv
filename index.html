@@ -4,19 +4,24 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/x-icon" href="./images/logo.ico" />
     <title>My CV APP</title>
     <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/customSweetalert2.css" />
+    <link rel="stylesheet" href="./css/logo.css" />
   </head>
   <body>
     <div class="page">
       <div class="page-front">
         <div class="avatar">
-          <img src="./images/Quy.jpg" alt="" />
+          <img src="#" alt="" id="imgPreview" />
+          <label for="avatar-image"><i class="bi bi-camera-fill"></i></label>
+          <input type="file" id="avatar-image" accept="image/png, image/jpeg" hidden />
         </div>
         <div class="menu">
           <div class="reset"><i class="bi bi-arrow-clockwise"></i></div>
           <div class="edit-content"><i class="bi bi-pencil"></i></div>
-          <div class="like"><i class="bi bi-heart"></i><span class="like-count">99</span></div>
+          <div class="like"><i class="bi bi-heart"></i><span class="like-count"></span></div>
           <div class="print"><i class="bi bi-printer"></i></div>
         </div>
         <div class="name" id="name-show">Nguyễn Văn Quý</div>
@@ -24,7 +29,7 @@
           <div class="item">
             <div class="item-icon"><i class="bi bi-envelope"></i></div>
             <div class="item-name">Email:</div>
-            <div class="item-desc" id="email-show">q5nguyenn@gmail.com</div>
+            <a class="item-desc" id="email-show" href="mailto: q5nguyenn@gmail.com">q5nguyenn@gmail.com</a>
           </div>
           <div class="item">
             <div class="item-icon"><i class="bi bi-phone"></i></div>
@@ -46,7 +51,7 @@
             <div class="item-name">Địa chỉ:</div>
             <div class="item-desc" id="address-show">Thái Hoà, Thái Thuỵ, Thái Bình</div>
           </div>
-          <div class="item item-target">
+          <div class="item">
             <div class="item-icon"><i class="bi bi-bullseye"></i></div>
             <div class="item-name">Mục tiêu nghề nghiệp:</div>
             <div class="item-desc" id="target-show">Đó là mục tiêu của tôi, tất cả những gì tôi muốn</div>
@@ -57,38 +62,26 @@
         <div class="page-bg1"></div>
         <div class="page-bg2"></div>
       </div>
-      <div class="page-right">
-        <!-- <div class="topic">
-          <div class="topic-top">
-            <div class="topic-title">Học vấn</div>
-          </div>
-          <div class="topic-child">
-            <div class="topic-child-title"><span>Học viện kỹ thuật Quân sự</span> <span>, Học viên</span></div>
-            <div class="topic-child-time"><span>08/2011</span> - <span>12/2016</span></div>
-            <div class="topic-child-desc">Học viên lớp Công trình Quốc phòng, Học viện kỹ thuật Quân sự.</div>
-            <div class="toppic-menu">
-              <div class="item-icon-simple icon-green topic-child-edit" style="cursor: pointer">
-                <i class="bi bi-pencil"></i>
-              </div>
-              <div class="item-icon-simple icon-red topic-child-edit" style="cursor: pointer">
-                <i class="bi bi-x-lg"></i>
-              </div>
-            </div>
-          </div>
-          <div class="toppic-menu">
-            <div class="item-icon-simple topic-add" style="cursor: pointer">
-              <i class="bi bi-plus-lg"></i>
-            </div>
-            <div class="item-icon-simple icon-green topic-edit" style="cursor: pointer">
-              <i class="bi bi-pencil"></i>
-            </div>
-            <div class="item-icon-simple icon-red topic-delete" style="cursor: pointer">
-              <i class="bi bi-x-lg"></i>
-            </div>
-          </div>
-        </div> -->
-      </div>
+      <div class="page-right"></div>
       <div class="page-menu">
+        <label class="item-icon choose-color primary-color" for="primary-color">
+          <input
+            type="color"
+            id="primary-color"
+            name="primary-color"
+            value="#ff0000"
+            style="visibility: hidden; width: 0px"
+          />
+        </label>
+        <label class="item-icon choose-color secondary-color" for="secondary-color">
+          <input
+            type="color"
+            id="secondary-color"
+            name="secondary-color"
+            value="#ff0000"
+            style="visibility: hidden; width: 0px"
+          />
+        </label>
         <div class="item-icon" style="cursor: pointer" id="add-topic"><i class="bi bi-file-earmark-plus"></i></div>
       </div>
     </div>
@@ -111,7 +104,7 @@
         </div>
         <div class="input-horizontal">
           <label for="birth">Ngày sinh: </label>
-          <input type="text" id="birthday" />
+          <input type="date" id="birthday" />
         </div>
         <div class="input-horizontal">
           <label for="gender">Giới tính: </label>
@@ -162,7 +155,7 @@
         </div>
         <div class="input-vertical">
           <label for="role">Miêu tả: </label>
-          <textarea name="" id="description" cols="30" rows="10" style="width: 100%"></textarea>
+          <textarea name="" id="description" rows="9" style="width: 100%"></textarea>
         </div>
         <div style="display: flex">
           <div class="input-horizontal" style="width: 50%">
@@ -182,12 +175,16 @@
         </div>
       </form>
     </div>
-
     <div class="popup-backdrop" style="display: none"></div>
+    <div class="logo-fixed">
+      <a href="https://q5nguyenn.github.io/" class="logo-brand" target="_blank">
+        <img src="./images/q.png" alt="" class="img-square" />
+      </a>
+    </div>
   </body>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script type="module" src="./js/main.js"></script>
   <script type="module" src="./js/data.js"></script>
-  <script type="module" src="./js/ultility.js"></script>
+  <!-- <script type="module" src="./js/ultility.js"></script> -->
 </html>
