@@ -569,45 +569,45 @@ $(document).ready(function () {
       $(this).find('.topic-menu').fadeOut(300);
     }, 300)
   );
-});
 
-// Đổi vị trí
-$('.page-right').on('click', '.topic-up', function (e) {
-  e.stopPropagation();
-  let topics = getItem('topics');
-  let id = $(this).data('id');
-  let index = topics.findIndex((item) => item.id == id);
-  topics = replace(topics, index, 'up');
-  setItem('topics', topics);
-  location.reload();
-});
+  // Đổi vị trí
+  $('.page-right').on('click', '.topic-up', function (e) {
+    e.stopPropagation();
+    let topics = getItem('topics');
+    let id = $(this).data('id');
+    let index = topics.findIndex((item) => item.id == id);
+    topics = replace(topics, index, 'up');
+    setItem('topics', topics);
+    location.reload();
+  });
 
-$('.page-right').on('click', '.topic-down', function (e) {
-  e.stopPropagation();
-  let topics = getItem('topics');
-  let id = $(this).data('id');
-  let index = topics.findIndex((item) => item.id == id);
-  topics = replace(topics, index, 'down');
-  setItem('topics', topics);
-  location.reload();
-});
+  $('.page-right').on('click', '.topic-down', function (e) {
+    e.stopPropagation();
+    let topics = getItem('topics');
+    let id = $(this).data('id');
+    let index = topics.findIndex((item) => item.id == id);
+    topics = replace(topics, index, 'down');
+    setItem('topics', topics);
+    location.reload();
+  });
 
-$('.page-right').on('click', '.topic-child-up', function (e) {
-  e.stopPropagation();
-  let topicChilds = getItem('topic_childs');
-  let id = $(this).data('id');
-  let index = topicChilds.findIndex((item) => item.id == id);
-  topicChilds = replaceChild(topicChilds, index, 'up');
-  setItem('topic_childs', topicChilds);
-  location.reload();
-});
+  $('.page-right').on('click', '.topic-child-up', function (e) {
+    e.stopPropagation();
+    let topicChilds = getItem('topic_childs');
+    let id = $(this).data('id');
+    let index = topicChilds.findIndex((item) => item.id == id);
+    topicChilds = replaceChild(topicChilds, index, 'up');
+    setItem('topic_childs', topicChilds);
+    location.reload();
+  });
 
-$('.page-right').on('click', '.topic-child-down', function (e) {
-  e.stopPropagation();
-  let topicChilds = getItem('topic_childs');
-  let id = $(this).data('id');
-  let index = topicChilds.findIndex((item) => item.id == id);
-  topicChilds = replaceChild(topicChilds, index, 'down');
-  setItem('topic_childs', topicChilds);
-  location.reload();
+  $('.page-right').on('click', '.topic-child-down', function (e) {
+    e.stopPropagation();
+    let topicChilds = getItem('topic_childs');
+    let id = $(this).data('id');
+    let index = topicChilds.findIndex((item) => item.id == id);
+    topicChilds = replaceChild(topicChilds, index, 'down');
+    setItem('topic_childs', topicChilds);
+    location.reload();
+  });
 });
