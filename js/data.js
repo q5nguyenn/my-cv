@@ -7,7 +7,7 @@ const user_reset = {
   email: 'q5nguyenn@gmail.com',
   phone_number: '0986295956',
   gender: 'Nam',
-  birthday: '1993-02-26',
+  birthday: '1998-02-26',
   address: 'Thái Hoà, Thái Thuỵ, Thái Bình',
   target:
     'Với  kiến thức tích luỹ, tôi đang tìm kiếm cơ hội để tham gia vào môi trường làm việc chuyên nghiệp trong ngành IT.</br>Mục tiêu của tôi là không ngừng học hỏi, phát triển kỹ năng. Tôi muốn được tham gia, áp dụng kiến thức, kỹ năng của mình để thực hiện những dự án có thể mang lại giá trị thực sự cho công ty.',
@@ -54,15 +54,6 @@ const topics_reset = [
 const topic_childs_reset = [
   {
     id: 1,
-    company: 'Học viện kỹ thuật Quân sự',
-    role: 'Học viên',
-    description: 'Chuyên ngành Công trình',
-    from: '2011-08-30',
-    to: '2016-12-31',
-    parent_id: 1,
-  },
-  {
-    id: 2,
     company: 'FPT Aptech',
     role: 'Sinh viên',
     description: 'Lớp T2205E1, T2207E',
@@ -71,7 +62,7 @@ const topic_childs_reset = [
     parent_id: 1,
   },
   {
-    id: 3,
+    id: 2,
     company: 'HTML, CSS',
     role: '',
     description: 'Thành thạo HTML, CSS, Boostrap',
@@ -81,7 +72,7 @@ const topic_childs_reset = [
   },
 
   {
-    id: 4,
+    id: 3,
     company: 'JavaScript',
     role: '',
     description: 'JavaScript, Jquery, Angular JS',
@@ -90,7 +81,7 @@ const topic_childs_reset = [
     parent_id: 4,
   },
   {
-    id: 5,
+    id: 4,
     company: 'ADSE (Advanced Diploma in Software Engineering)',
     role: '',
     description: 'Đã hoàn thành 2/4 học kì tại FPT Aptech',
@@ -99,16 +90,16 @@ const topic_childs_reset = [
     parent_id: 3,
   },
   {
-    id: 6,
+    id: 5,
     company: 'Quản lý cơ sở dữ liệu',
     role: '',
-    description: 'Sử dụng SQL Server và MySQL để quản lý cơ sở dữ liệu',
+    description: 'Sử dụng SQL Server, MySQL, MongoDB để quản lý cơ sở dữ liệu',
     from: '2022-06-01',
     to: '2023-01-01',
     parent_id: 4,
   },
   {
-    id: 7,
+    id: 6,
     company: 'Java',
     role: '',
     description: 'Java core và Java nâng cao',
@@ -117,7 +108,7 @@ const topic_childs_reset = [
     parent_id: 4,
   },
   {
-    id: 8,
+    id: 7,
     company: 'C#',
     role: '',
     description: 'Cơ bản về ngôn ngữ lập trình C#',
@@ -126,7 +117,7 @@ const topic_childs_reset = [
     parent_id: 4,
   },
   {
-    id: 9,
+    id: 8,
     company: 'PHP',
     role: '',
     description: 'PHP thuần và framework Laravel',
@@ -135,7 +126,25 @@ const topic_childs_reset = [
     parent_id: 4,
   },
   {
+    id: 9,
+    company: 'NodeJS',
+    role: '',
+    description: 'NodeJS & ExpressJS',
+    from: '2023-08-01',
+    to: '2024-02-01',
+    parent_id: 4,
+  },
+  {
     id: 10,
+    company: 'ASP.NET',
+    role: '',
+    description: 'ASP.NET Core MVC và ASP.NET Core Web API',
+    from: '2023-08-01',
+    to: '2024-02-01',
+    parent_id: 4,
+  },
+  {
+    id: 11,
     company: 'Nghe nhạc',
     role: '',
     description: 'Thời gian rảnh rỗi tôi thường nghe nhạc để thư giãn và tìm cảm hứng.',
